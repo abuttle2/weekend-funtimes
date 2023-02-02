@@ -1,15 +1,19 @@
-
-
-
-
-
-
-
-
-
-
-
-
+/* Adding styles to Navbar  */
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 40px;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-left: 0; 
+}
+.navbar .navbar-nav  {
+    margin: 0 0 0 auto;  
+ }
+ 
+ .navbar .nav-item a{
+     color: white !important;
+     font-size: 28px;
+ }
 
 
 
