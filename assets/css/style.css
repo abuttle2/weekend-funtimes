@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Jumbotron styling */
+
+.jumbotron h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color:white;
+}
+
+    .jumbotron p {
+        font-size: 38px;
+        font-weight: bold;
+        color:wheat;
+    }
+
+
+/* Jumbotron image */
+.jumbotron {
+    background-image: url(../images/camping.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:450px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex-direction: column;
+}
