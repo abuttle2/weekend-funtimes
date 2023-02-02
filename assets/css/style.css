@@ -24,10 +24,8 @@
     .jumbotron p {
         font-size: 38px;
         font-weight: bold;
-        color:wheat;}
-    
-
-
+        color:wheat;
+    }
 
 
 /* Jumbotron image */
@@ -35,7 +33,7 @@
     background-image: url(../images/camping.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height:400px;
+    height:450px;
     display: flex;
     align-items:center;
     justify-content:center;
