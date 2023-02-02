@@ -13,16 +13,19 @@
 
 
 
+/* Jumbotron styling */
+
+.jumbotron h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color:white;}
 
 
 
 
 
 
-
-
-
-/* Jumbotron  */
+/* Jumbotron image */
 .jumbotron {
     background-image: url(../images/camping.jpg);
     background-size: cover;
