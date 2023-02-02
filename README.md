@@ -102,4 +102,11 @@ Please refer to the LICENSE file for more information.
 
 ## 📧contact
 
-adriana.camarotto@gmail.com
+aobiaderi@yahoo.com - Obiaderi Agbonrofo
+
+willyguille97@gmail.com - Guillermo Serra
+
+adriana.camarotto@gmail.com - Adriana Camarotto
+
+alexbuttle@hotmail.co.uk - Alex Buttle
+
