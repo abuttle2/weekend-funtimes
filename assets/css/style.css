@@ -16,11 +16,16 @@
 /* Jumbotron styling */
 
 .jumbotron h1 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
-    color:white;}
+    color:white;
+}
 
-
+    .jumbotron p {
+        font-size: 38px;
+        font-weight: bold;
+        color:wheat;}
+    
 
 
 
