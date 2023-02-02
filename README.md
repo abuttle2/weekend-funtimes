@@ -68,9 +68,17 @@ N/A
 
 ## 📚 What heve we learned: 
 
-    - 
-    -
-    -
+    - Speak technically about a feature that was implemented in your project.
+
+    - Explain and execute Git branching workflow in a collaborative project.
+
+    - Resolve merge conflicts.
+
+    - Explain agile software development.
+
+    - Design, build, and deploy a client-side web application using GitHub Pages.
+
+    - Prepare a professional presentation and repository README for your project.
 
 ---
 
