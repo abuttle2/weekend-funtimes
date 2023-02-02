@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Jumbotron  */
+.jumbotron {
+    background-image: url(../images/camping.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:400px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex-direction: column;
+}
