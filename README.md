@@ -55,7 +55,7 @@ accordingly.
 ![preview](./assets/.........png)
 ## Link
 
-[click here to access:](https....)
+[click here to access:](https://abuttle2.github.io/weekend-funtimes/)
 
 ---
 
