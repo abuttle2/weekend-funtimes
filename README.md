@@ -18,15 +18,6 @@ Using the weather api to check the weather forecast for that weekend, they will 
 
 There will be the movie api to help select the various movies the guests want to watch and these will filter based on ratings inputted. We will also have the map api to help select good camping spots and these will filter based on user choices.
  
-### How does the product solve that problem?
-
-Based on user input, the data from the Weather API will generate the weather forecast for the upcoming weekend and inform the user as to whether they should plan for outdoor camping activities or indoor movie binge watching events. For the movies theme,we will also have an API of a list of movies that you can filter through based on ratings selected by the user.For the outdoor camping activities theme, we will have an API of a list of good camping locations that you can filter through based on user input.
- 
-As an events planning company
-I WANT to know the weather forecast for any weekend and the option of generating additional info about movie options and camping locations to choose from 
-SO THAT I can determine what theme the weekend funtime will be and plan
-accordingly. 
-
 ---
 
 ## Third Party APIs used: 
@@ -51,7 +42,7 @@ It is possible to use the navigation bar at the top of the page to go to the Wel
 
 Users can also enter the city`s where they want to spent their weekend and the data from the Weather API will generate the weather forecast for the upcoming weekend and inform the user as to whether they should plan for outdoor camping activities or indoor movie binge watching events. 
 
-For the movies theme, has an API of a list of movies that you can filter through based on ratings selected by the user. For the outdoor camping activities theme, we will have an API of a list of good camping locations that you can filter through based on user input.
+For the movies theme, has an API of a list of movies that you can filter through based on ratings selected by the user. For the outdoor camping activities theme, has an API of a list of good camping locations that you can filter through based on user input.
  
 Events planning companys can know the weather forecast for any weekend and the option of generating additional info about movie options and camping locations to choose from 
 So that they can determine what theme the weekend funtime will be and plan
