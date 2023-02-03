@@ -14,7 +14,19 @@ $("#submitBtn").on("click", function (event) {
         url: apiURL,
         success: function (data) {
             console.log(data);
-            // Do something with the data
+            var currentDate = new Date();
+            var nextWeekend = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + (5 - currentDate.getDay() + 7) % 7);
+            
+            // Loop through the list of weather data to find the weather for the next weekend
+            var weatherForNextWeekend;
+            for (var i = 0; i < data.list.length; i++) {
+                var currentWeather = data.list[i];
+                var weatherDate = new Date(currentWeather.dt * 1000);
+                if (weatherDate.getDate() == nextWeekend.getDate() && weatherDate.getMonth() == nextWeekend.getMonth() && weatherDate.getFullYear() == nextWeekend.getFullYear()) {
+                    weatherForNextWeekend = currentWeather;
+                    break;
+                }
+            }
         }
     });
 });
