@@ -53,6 +53,11 @@
     flex-direction: column;
 }
 
+/* Submit button styling */
+.btn-primary{
+    margin-bottom: 50px;
+}
+
 /* footer */
 
 footer {
