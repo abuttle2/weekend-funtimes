@@ -59,14 +59,10 @@ footer {
     margin: 0 auto;
     height: 80px;
     width: auto;
-    background-color: ;
-    margin-left: 20px;
-    color: black;
+    background-color: #aaa;
+    color: wheat; ;
     text-align: center;
     text-decoration: none;
     text-size-adjust: auto;
 }
 
-footer p {
-    color: ;
-}
