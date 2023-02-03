@@ -27,6 +27,14 @@ $("#submitBtn").on("click", function (event) {
                     break;
                 }
             }
+            // Display the weather information
+            var weatherDiv = $("<div>").attr("id", "#weather-info");
+            var weatherEl = $("#openweather-api");
+            
+
+            $(weatherDiv).text("The weather for the next weekend in " + data.city.name + " is expected to be " + weatherForNextWeekend.weather[0].description + " with a high of " + weatherForNextWeekend.main.temp_max + "°C and a low of " + weatherForNextWeekend.main.temp_min + "°C.");
+
+            $(weatherEl).append(weatherDiv);
         }
     });
 });
