@@ -23,12 +23,25 @@ var getMovieGenres = function () {
     });
 }
 
+var createMovie
+
 var searchMovieID = function (genres) {
     //Reference the movie genres objects
+    var movieApiEl = $("#movies-api");
 
-    //Iterate through the array of genres objects
+    console.log(movieApiEl)
+
+    // $("");
+
+    //Iterate through the array of genres objects and dynamically create text elements
     for (var i = 0; i < genres.length; i++) {
         console.log(genres[i]);
+        // var btn = $('<button/>', {
+        //     text: genres[i].name,
+        //     class: 'btn btn-primary',
+        //     id: genres[i].id
+        // });
+        // movieApiEl.append(btn);
     }
 
     var genreID = 27;

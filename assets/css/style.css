@@ -4,23 +4,24 @@
     font-size: 50px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-left: 0; 
+    margin-left: 0;
     font-family: 'Tangerine', serif;
     text-shadow: 4px 4px 4px #aaa;
 
 
 }
-.navbar .navbar-nav  {
-    margin: 0 0 0 auto;  
- }
- 
- .navbar .nav-item a{
-     color: white !important;
-     font-size: 28px;
-     text-shadow: 2px 2px 2px #aaa;
- }
 
- .navbar .nav-item a:hover{
+.navbar .navbar-nav {
+    margin: 0 0 0 auto;
+}
+
+.navbar .nav-item a {
+    color: white !important;
+    font-size: 28px;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+.navbar .nav-item a:hover {
     background-color: blue;
 }
 
@@ -29,15 +30,15 @@
 .jumbotron h1 {
     font-size: 60px;
     font-weight: bold;
-    color:white;
-    
+    color: white;
+
 }
 
-    .jumbotron p {
-        font-size: 38px;
-        font-weight: bold;
-        color:wheat;
-    }
+.jumbotron p {
+    font-size: 38px;
+    font-weight: bold;
+    color: wheat;
+}
 
 
 /* Jumbotron image */
@@ -45,10 +46,18 @@
     background-image: url(../images/camping.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height:450px;
+    height: 450px;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     flex-direction: column;
 }
+
+/* #movies-api {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+} */
