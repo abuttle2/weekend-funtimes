@@ -25,11 +25,8 @@ var getMovieGenres = function () {
 
 var searchMovieId = function (genres) {
     var movieApiEl = $(".container");
-    console.log(movieApiEl)
-
     //Iterate through the array of genres objects and dynamically create text elements
     for (var i = 0; i < genres.length; i++) {
-        console.log(genres[i]);
         var btn = $("<button>").attr({
             name: genres[i].name,
             type: "button",
@@ -41,17 +38,18 @@ var searchMovieId = function (genres) {
     }
 
     $(movieApiEl).on('click', '.btn', function () {
-        console.log("Clicked");
+        var genreId = $(this).attr("id");
+        console.log("Button clicked with ID: " + genreId);
     });
 
-    var genreId = 27;
+
     var IdQueryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0b443d2c2139bab3c9172850e7125437&with_genres=" + genreId;
 
     $.ajax({
         url: IdQueryURL,
         method: "GET"
     }).then(function (response) {
-        // console.log(genres);
+        console.log(response);
     });
 
 }
