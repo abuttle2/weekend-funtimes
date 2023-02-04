@@ -19,36 +19,36 @@ var getMovieGenres = function () {
         for (var i = 0; i < response.genres.length; i++) {
             movieGenres.push(response.genres[i]);
         }
-        searchMovieID(movieGenres);
+        searchMovieId(movieGenres);
     });
 }
 
-var createMovie
-
-var searchMovieID = function (genres) {
-    //Reference the movie genres objects
-    var movieApiEl = $("#movies-api");
-
+var searchMovieId = function (genres) {
+    var movieApiEl = $(".container");
     console.log(movieApiEl)
-
-    // $("");
 
     //Iterate through the array of genres objects and dynamically create text elements
     for (var i = 0; i < genres.length; i++) {
         console.log(genres[i]);
-        // var btn = $('<button/>', {
-        //     text: genres[i].name,
-        //     class: 'btn btn-primary',
-        //     id: genres[i].id
-        // });
-        // movieApiEl.append(btn);
+        var btn = $("<button>").attr({
+            name: genres[i].name,
+            type: "button",
+            class: "btn btn-light",
+            id: genres[i].id
+        }).text(genres[i].name);
+
+        movieApiEl.append(btn);
     }
 
-    var genreID = 27;
-    var queryURL2 = "https://api.themoviedb.org/3/discover/movie?api_key=0b443d2c2139bab3c9172850e7125437&with_genres=" + genreID;
+    $(movieApiEl).on('click', '.btn', function () {
+        console.log("Clicked");
+    });
+
+    var genreId = 27;
+    var IdQueryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0b443d2c2139bab3c9172850e7125437&with_genres=" + genreId;
 
     $.ajax({
-        url: queryURL2,
+        url: IdQueryURL,
         method: "GET"
     }).then(function (response) {
         // console.log(genres);

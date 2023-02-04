@@ -54,10 +54,26 @@
     flex-direction: column;
 }
 
-/* #movies-api {
+.content-container {
     display: flex;
     align-items: center;
     height: 100%;
     justify-content: center;
-    flex-direction: column;
-} */
+    flex-direction: row;
+}
+
+
+#movies-api.container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#movie-elements button{
+    margin: 5px;
+    justify-content: space-evenly;
+
+}
+
