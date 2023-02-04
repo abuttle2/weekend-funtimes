@@ -55,7 +55,19 @@ var searchMovieId = function (genres) {
             url: IdQueryURL,
             method: "GET"
         }).then(function (response) {
+            for (var i = 0; i < response.results.length; i++) {
+                var movie = response.results[i];
+                var posterPath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+                var card = $("<div>").addClass("card");
+                var cardImage = $("<img>").addClass("card-img-top").attr("src", posterPath);
+                var cardBody = $("<div>").addClass("card-body");
+                var cardTitle = $("<h5>").addClass("card-title").text(movie.title);
+                var cardText = $("<p>").addClass("card-text").text(movie.overview);
 
+                cardBody.append(cardTitle, cardText);
+                card.append(cardImage, cardBody);
+                movieCardEl.append(card);
+            }
         });
     });
 }
