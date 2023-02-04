@@ -33,25 +33,26 @@ var searchMovieId = function (genres) {
             class: "btn btn-light",
             id: genres[i].id
         }).text(genres[i].name);
-
         movieApiEl.append(btn);
     }
 
+    //Click events for button elements will append the Query URL based on the ID
     $(movieApiEl).on('click', '.btn', function () {
         var genreId = $(this).attr("id");
+        var pageNo = (Math.floor(Math.random() * 100) + 1);
         console.log("Button clicked with ID: " + genreId);
+
+        //Append ID to URL string
+        var IdQueryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0b443d2c2139bab3c9172850e7125437&with_genres=" + genreId + "&page=" + pageNo;
+
+        $.ajax({
+            url: IdQueryURL,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+        });
+
     });
-
-
-    var IdQueryURL = "https://api.themoviedb.org/3/discover/movie?api_key=0b443d2c2139bab3c9172850e7125437&with_genres=" + genreId;
-
-    $.ajax({
-        url: IdQueryURL,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
-    });
-
 }
 
 getMovieGenres();
