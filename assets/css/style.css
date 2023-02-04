@@ -63,7 +63,7 @@
 }
 
 
-#movies-api.container{
+#movies-api.container {
     display: flex;
     align-items: center;
     height: 100%;
@@ -71,9 +71,12 @@
     flex-direction: row;
 }
 
-#movie-elements button{
+#movie-elements button {
     margin: 5px;
     justify-content: space-evenly;
 
 }
 
+.card {
+    width: 300px;
+}

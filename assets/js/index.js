@@ -6,6 +6,10 @@ $("#submitBtn").on("click", function (event) {
     $("#maps-iframe").attr("src", newSrc);
 });
 
+var movieApiEl = $(".container");
+var movieEl = $(".movie-genres");
+var movieCardEl = $(".movie-cards");
+
 var getMovieGenres = function () {
     // var queryURL = "https://api.themoviedb.org/3/search/movie?api_key=0b443d2c2139bab3c9172850e7125437&language=en-US&query=horror&page=1&include_adult=false";
     //Store movies objects into an array
@@ -24,7 +28,7 @@ var getMovieGenres = function () {
 }
 
 var searchMovieId = function (genres) {
-    var movieApiEl = $(".container");
+
     //Iterate through the array of genres objects and dynamically create text elements
     for (var i = 0; i < genres.length; i++) {
         var btn = $("<button>").attr({
@@ -33,11 +37,13 @@ var searchMovieId = function (genres) {
             class: "btn btn-light",
             id: genres[i].id
         }).text(genres[i].name);
-        movieApiEl.append(btn);
+        movieEl.append(btn);
     }
 
     //Click events for button elements will append the Query URL based on the ID
-    $(movieApiEl).on('click', '.btn', function () {
+    movieApiEl.on('click', '.btn', function () {
+        movieCardEl.empty();
+
         var genreId = $(this).attr("id");
         var pageNo = (Math.floor(Math.random() * 100) + 1);
         console.log("Button clicked with ID: " + genreId);
@@ -49,10 +55,12 @@ var searchMovieId = function (genres) {
             url: IdQueryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
-        });
 
+        });
     });
 }
 
 getMovieGenres();
+
+
+//movieApiEl.empty();
