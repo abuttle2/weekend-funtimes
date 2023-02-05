@@ -61,8 +61,12 @@
 .my-form{
         margin-top: -20px;
         background-color: #eee
-        
+      
 }
+
+.form-group{
+    margin-top: 20px;}
+    
 /* Submit button styling */
 .btn-primary{
     margin-bottom: 50px;
