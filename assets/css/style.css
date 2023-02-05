@@ -54,84 +54,39 @@
     flex-direction: column;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.content-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-    flex-direction: row;
+/* About section styling */
+
+.abt {
+    margin-top: -30px;
+    background-color: #eee
+}
+
+.my-form {
+    margin-top: -20px;
+    background-color: #eee
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+/* Submit button styling */
+.btn-primary {
+    margin-bottom: 50px;
+
+}
+
+/* footer */
+
+footer {
+    margin: 0 auto;
+    height: 200px;
+    width: auto;
+    background-color: #aaa;
+    color: #26272b;
+    text-align: center;
+    text-decoration: none;
+    text-size-adjust: auto;
 }
 
 
