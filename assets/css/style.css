@@ -64,8 +64,9 @@ footer {
     margin: 0 auto;
     height: 80px;
     width: auto;
-    background-color: #aaa;
-    color: wheat; ;
+    background-color:#aaa ;
+    margin-left: 20px;
+    color: black;
     text-align: center;
     text-decoration: none;
     text-size-adjust: auto;
