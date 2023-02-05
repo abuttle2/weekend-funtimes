@@ -52,10 +52,21 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     flex-direction: column;
 }
+/* About section styling */
 
+.abt{
+    margin-top: -30px;
+    background-color: #eee}
+
+.my-form{
+        margin-top: -20px;
+        background-color: #eee
+        
+}
 /* Submit button styling */
 .btn-primary{
     margin-bottom: 50px;
+ 
 }
 
 /* footer */
