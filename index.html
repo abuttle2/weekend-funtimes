@@ -2,101 +2,109 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekend Funtimes</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Tangerine&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekend Funtimes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Tangerine&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <header class="mynav"> 
-      <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <a class="navbar-brand" href="#">Weekend Funtimes</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#disp-4">Welcome</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about-container">About</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="#openweather-api">Weather & Camping</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#movies-api">Movies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#ct-section1">Contact</a>
-          </ul>
-        </div> 
-      </nav>
-    </header> 
+  <header class="mynav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+      <a class="navbar-brand" href="#">Weekend Funtimes</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#disp-4">Welcome</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-container">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#openweather-api">Weather & Camping</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#movies-api">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ct-section1">Contact</a>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <main>  
-        <section class="jumbotron  text-center" >
-          <h1 class="display-4" id="disp-4">Welcome to Weekend Funtimes!</h1>
-          
-          <p class="lead">The fabulous choice for all outdoor camping & indoor movie themed weekend events planning.</p>
-          <!-- <a class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#exampleModal">Hire Me</a>     -->
-        </section>
-        <section id="about-container" class="abt">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2>About</h2>
-            <p class="text-justify">Weekend Funtimes is a solution-focused company, addressing the challenges of event planning. Our platform incorporates weather, movie and map APIs to provide a seamless experience for weekend events. The weather API informs the event theme, either outdoor camping for good weather or movie binge-watching for bad weather. The movie API offers movie selection with user-defined ratings filters and the map API selects the ideal camping location based on user preferences. Our goal is to simplify event planning and ensure an enjoyable weekend for all.</p>
-          </div>
-        </section>
-        <section id="api-container" class="container-fluid">
-          <div class="row d-flex justify-content-center my-form">
-            <div class="col-3">
-              <form>
-                <div class="form-group">
-                  <label for="cityInput">Enter city name:</label>
-                  <input type="text" class="form-control" id="cityInput" placeholder="City name">
-                </div>
-                <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
-              </form>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3" id="openweather-api">
-              <h2 class="display-4 text-center">OpenWeather API</h2>
-            </div>
-            <div class="col-3" id="maps-api">
-              <h2 class="display-4 text-center">Maps API</h2>
-              <iframe id="maps-iframe" width="500" height="400" style="border:10" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=campsite&key=AIzaSyAdjP3RyKMzcagNwl7pXD76vnw9KXjmTc0"></iframe>
-            </div>
-            <div class="col-6" id="movies-api">
-              <h2 class="display-4 text-center">Movies API</h2>
-            </div>
-          </div>
-        </section>
-        
-    </main>
-    
-    <footer class="footer-container">
+  <main>
+    <section class="jumbotron  text-center">
+      <h1 class="display-4" id="disp-4">Welcome to Weekend Funtimes!</h1>
 
-      <section class="container">
-
-        <div class="row">
- 
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <h6>Get in Touch</h6>
+      <p class="lead">The fabulous choice for all outdoor camping & indoor movie themed weekend events planning.</p>
+      <!-- <a class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#exampleModal">Hire Me</a>     -->
+    </section>
+    <section id="about-container" class="abt">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <h2>About</h2>
+        <p class="text-justify">Weekend Funtimes is a solution-focused company, addressing the challenges of event
+          planning. Our platform incorporates weather, movie and map APIs to provide a seamless experience for weekend
+          events. The weather API informs the event theme, either outdoor camping for good weather or movie
+          binge-watching for bad weather. The movie API offers movie selection with user-defined ratings filters and the
+          map API selects the ideal camping location based on user preferences. Our goal is to simplify event planning
+          and ensure an enjoyable weekend for all.</p>
+      </div>
+    </section>
+    <section id="api-container" class="container-fluid">
+      <div class="row d-flex justify-content-center my-form">
+        <div class="col-3">
+          <form>
+            <div class="form-group">
+              <label for="cityInput">Enter city name:</label>
+              <input type="text" class="form-control" id="cityInput" placeholder="City name">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3" id="openweather-api">
+          <h2 class="display-4 text-center">OpenWeather API</h2>
+        </div>
+        <div class="col-3" id="maps-api">
+          <h2 class="display-4 text-center">Maps API</h2>
+          <iframe id="maps-iframe" width="500" height="400" style="border:10" loading="lazy" allowfullscreen
+            src="https://www.google.com/maps/embed/v1/search?q=campsite&key=AIzaSyAdjP3RyKMzcagNwl7pXD76vnw9KXjmTc0"></iframe>
+        </div>
+        <div class="col-12" id="movies-api">
+          <h2 class="display-4 text-center">Movies API</h2>
+          <div class="container" id="movie-elements">
+            <div class="movie-genres"></div>
+            <div class="movie-cards"></div>
           </div>
+        </div>
+    </section>
 
+  </main>
+
+  <footer class="footer-container">
+
+    <section class="container">
+
+      <div class="row">
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <h6>Get in Touch</h6>
         </div>
 
       </div>
 
-      <hr> 
+      </div>
+
+      <hr>
       <!-- the <hr> element is a line and represents a break or a transition to another topic within a section. -->
 
       <div class="row">
@@ -116,9 +124,12 @@
         </div>
       </div>
 
-    </footer>
+  </footer>
 
-    <script src="./assets/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
