@@ -38,6 +38,15 @@ $("#submitBtn").on("click", function (event) {
             var cardBody = $("<div>").addClass("card-body");
             $(card).append(cardBody);
 
+            var cardTitle = $("<h3>").addClass("card-title");
+            var formattedDate = weatherDate.toLocaleDateString("en-US", {
+                day: "2-digit",
+                month: "2-digit",
+                year: "numeric"
+            });
+            cardTitle.text(formattedDate);
+            $(cardBody).append(cardTitle);
+
             // Add the weather icon
             var icon = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + weatherForNextWeekend.weather[0].icon + "@2x.png");
             $(cardBody).append(icon);
