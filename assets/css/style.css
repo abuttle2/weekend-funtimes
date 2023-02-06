@@ -76,6 +76,20 @@
 
 }
 
+#movies-api.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#movie-elements button {
+    margin: 5px;
+    justify-content: space-evenly;
+
+}
+
 /* footer */
 
 .footer {
@@ -90,21 +104,6 @@
     text-align: center;
     text-decoration: none;
     text-size-adjust: auto;
-}
-
-
-#movies-api.container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-    flex-direction: row;
-}
-
-#movie-elements button {
-    margin: 5px;
-    justify-content: space-evenly;
-
 }
 
 .footer .social_media-icons a {
