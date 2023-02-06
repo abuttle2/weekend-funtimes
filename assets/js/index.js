@@ -31,6 +31,8 @@ $("#submitBtn").on("click", function (event) {
             // Display the weather information
             var weatherDiv = $("<div>").attr("id", "#weather-info");
             var weatherEl = $("#openweather-api");
+            var weatherTitle = $("<p>").text("The forecast for next Friday at " + data.city.name + " is the following:");
+            $(weatherEl).append(weatherTitle);
 
 
             // Create the Bootstrap card
