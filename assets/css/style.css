@@ -145,6 +145,11 @@ background-color: #aaa;
     }
 }
 
+.hr {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
 .social_media-icons {
     margin-top: 25px;
     padding-left: 0;
