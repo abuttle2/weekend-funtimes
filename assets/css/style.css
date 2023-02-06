@@ -200,3 +200,14 @@
     width: 34px;
     font-size: 14px;
 }
+
+.form {
+    
+    width: 100%;
+    max-width: 30rem;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: wheat;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
+}
