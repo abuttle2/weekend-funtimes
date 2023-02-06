@@ -8,7 +8,7 @@ $("#submitBtn").on("click", function (event) {
     var newSrc = "https://www.google.com/maps/embed/v1/search?q=campsite+" + city + "&key=AIzaSyAdjP3RyKMzcagNwl7pXD76vnw9KXjmTc0";
     $("#maps-iframe").attr("src", newSrc);
 
-    // Make an AJAX call to a different API
+    // Make an AJAX call to openweather api
     var apiURL = "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=" + city + "&appid=32306d8e68f68c9295a794f157aaab66";
     $.ajax({
         url: apiURL,
@@ -16,14 +16,15 @@ $("#submitBtn").on("click", function (event) {
             console.log(data);
             var currentDate = new Date();
             var nextWeekend = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + (5 - currentDate.getDay() + 7) % 7);
-
+            nextWeekend.setHours(9);
+            nextWeekend.setMinutes(0);
             // Loop through the list of weather data to find the weather for the next weekend
             var weatherForNextWeekend;
             for (var i = 0; i < data.list.length; i++) {
                 var currentWeather = data.list[i];
                 var weatherDate = new Date(currentWeather.dt * 1000);
-                if (weatherDate.getDate() == nextWeekend.getDate() && weatherDate.getMonth() == nextWeekend.getMonth() && weatherDate.getFullYear() == nextWeekend.getFullYear()) {
-                    weatherForNextWeekend = currentWeather;
+                if (weatherDate.getTime() >= nextWeekend.getTime()) {
+                    weatherForNextWeekend = data.list[i];
                     break;
                 }
             }
