@@ -117,7 +117,7 @@ background-color: #aaa;
 }
 
 .copyright-text {
-    margin-left: 60px;
+    margin-left: 90px;
     margin-top: 30px;
     text-align: left;
     
@@ -162,14 +162,6 @@ background-color: #aaa;
     margin-bottom: 8px;
 }
 
-.social_media-icons li.title {
-    margin-right: 15px;
-    text-transform: uppercase;
-    color: #96a2b2;
-    font-size: 13px;
-    font-weight: 700px;
-}
-
 .social_media-icons a {
     background-color: #eceeef;
     color: #26272b;
@@ -189,8 +181,8 @@ background-color: #aaa;
 .social_media-icons a:active,
 .social_media-icons a:focus,
 .social_media-icons a:hover {
-    color: #fff;
-    background-color: #818a91;
+    color: wheat;
+    background-color: #262930;
 }
 
 .social_media-icons.size-sm a {
@@ -200,11 +192,3 @@ background-color: #aaa;
     font-size: 14px;
 }
 
-@media (max-width: 797px) {
-    .social_media-icons li.title
-    {
-    display: block;
-    margin-right: 0;
-    font-weight: 600px;
-    }  
-}
