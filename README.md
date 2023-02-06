@@ -69,7 +69,7 @@ accordingly.
 
 ---
 
-## 📚 What heve we learned: 
+## 📚 What have we learned: 
 
     - Speak technically about a feature that was implemented in your project.
 

@@ -76,20 +76,6 @@
 
 }
 
-/* footer */
-
-footer {
-    margin: 0 auto;
-    height: 200px;
-    width: auto;
-    background-color: #aaa;
-    color: #26272b;
-    text-align: center;
-    text-decoration: none;
-    text-size-adjust: auto;
-}
-
-
 #movies-api.container {
     display: flex;
     align-items: center;
@@ -104,13 +90,105 @@ footer {
 
 }
 
-.card {
-    width: 300px;
+/* footer */
+
+.footer {
+    margin: 30px auto;
+    height: auto;
+    width: auto;
+    padding: 45px 0 20px;
+    background-color: #bbb;
+    color: #26272b;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    text-size-adjust: auto;
 }
 
-.movie-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.footer .social_media-icons a {
+width: 40px;
+height: 40px;
+line-height: 40px;
+margin-left: 20px;
+margin-right: 0;
+border-radius: 100%;
+background-color: #aaa;
 }
+
+.copyright-text {
+    margin-left: 90px;
+    margin-top: 30px;
+    text-align: left;
+    
+}
+
+@media (max-width: 991px) {
+    .footer [class^=col-]
+    {
+        text-align: left;
+        margin-bottom: 30px;
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer 
+    {
+        padding-bottom: 0;
+        height: auto;
+    }
+    .footer .copyright-text, 
+    .footer .social_media-icons 
+    {
+    text-align: center;
+    }
+}
+
+.hr {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.social_media-icons {
+    margin-top: 25px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social_media-icons li {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.social_media-icons a {
+    background-color: #eceeef;
+    color: #26272b;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100px;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.social_media-icons a:active,
+.social_media-icons a:focus,
+.social_media-icons a:hover {
+    color: wheat;
+    background-color: #262930;
+}
+
+.social_media-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+}
+
