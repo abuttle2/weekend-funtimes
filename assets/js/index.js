@@ -33,7 +33,11 @@ $("#submitBtn").on("click", function (event) {
             var weatherEl = $("#openweather-api");
 
 
-            $(weatherDiv).text("The weather for the next weekend in " + data.city.name + " is expected to be " + weatherForNextWeekend.weather[0].description + " with a high of " + weatherForNextWeekend.main.temp_max + "°C and a low of " + weatherForNextWeekend.main.temp_min + "°C.");
+            // Create the Bootstrap card
+            var card = $("<div>").addClass("card");
+            var cardBody = $("<div>").addClass("card-body");
+            $(card).append(cardBody);
+
 
             $(weatherEl).append(weatherDiv);
         }
