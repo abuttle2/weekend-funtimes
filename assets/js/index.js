@@ -38,7 +38,26 @@ $("#submitBtn").on("click", function (event) {
             var cardBody = $("<div>").addClass("card-body");
             $(card).append(cardBody);
 
+            // Add the weather icon
+            var icon = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + weatherForNextWeekend.weather[0].icon + "@2x.png");
+            $(cardBody).append(icon);
 
+            // Add the temperature information
+            var temperature = $("<p>").addClass("card-text").text("Temperature: " + weatherForNextWeekend.main.temp_min + "°C - " + weatherForNextWeekend.main.temp_max + "°C");
+            $(cardBody).append(temperature);
+
+            // Add the wind information
+            var wind = $("<p>").addClass("card-text").text("Wind Speed: " + weatherForNextWeekend.wind.speed + " m/s");
+            $(cardBody).append(wind);
+
+            // Add the humidity information
+            var humidity = $("<p>").addClass("card-text").text("Humidity: " + weatherForNextWeekend.main.humidity + "%");
+            $(cardBody).append(humidity);
+
+            // Add the card to the weatherDiv
+            $(weatherDiv).append(card);
+
+            // Append weatherDiv to weatherEl
             $(weatherEl).append(weatherDiv);
         }
     });
