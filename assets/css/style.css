@@ -58,9 +58,12 @@
 
 .abt {
     margin-top: -30px;
-    background-color: #eee
+    background-color: #eee;
+    padding: 10px;
 }
-
+.wkfun{
+    font-size: 24px;
+}
 .my-form {
     margin-top: -20px;
 }
@@ -200,8 +203,10 @@
     font-size: 14px;
 }
 
+/* form */
+
 #cont-form {
-    min-width: 100vh;
+    min-width: 150vh;
     display: grid;
     place-items: center;
     padding: 1rem;
@@ -221,31 +226,39 @@
     color: #323235;    
 }
 
-label,
-input,
-textarea,
-button {
+.form-label,
+.form-input,
+.form-textarea,
+.form-btn {
     display: block;
 }
-input,
-textarea,
-button {
+
+.form-input,
+.form-textarea,
+.form-btn {
     width: 100%;
     font-weight: 700;
     padding: 1.25rem;
     font: inherit;
 }
+    
 
-input,
-textarea,
-button{
+.form-input,
+.form-textarea {
     color: whitesmoke;
     margin-bottom: 1rem;
     background: #323644;
     border: 0.125rem solid transparent;
     border-radius: 1.125rem;
-    transition: 0.3s;
+    transition: 0.5s;
 }
+    
 
-
+.form-input:hover,
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: wheat;
+    box-shadow: 0 0 0 0.3125rem rgba(199, 198, 198, 0.219);
+}
 
