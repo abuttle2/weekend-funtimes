@@ -218,3 +218,35 @@
     background: black;
 }
 
+.container #form-title {
+    color: #323235;    
+}
+
+label,
+input,
+textarea,
+button {
+    display: block;
+}
+input,
+textarea,
+button {
+    width: 100%;
+    font-weight: 700;
+    padding: 1.25rem;
+    font: inherit;
+}
+
+input,
+textarea,
+button{
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    background: #323644;
+    border: 0.125rem solid transparent;
+    border-radius: 1.125rem;
+    transition: 0.3s;
+}
+
+
+
