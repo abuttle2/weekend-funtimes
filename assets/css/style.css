@@ -28,8 +28,10 @@
     transition: all 0.3s ease;
 }
 
-/* 
-.navbar .navbar-toggler-icon {background-color: white;} */
+.navbar .navbar-toggler-icon {
+    background-color: white;
+} 
+
 /* Jumbotron styling */
 
 .jumbotron h1 {
@@ -45,6 +47,17 @@
     color: wheat;
 }
 
+/* make the jumbotron text responsive by using media queries */
+
+@media (max-width: 576px) {
+    .jumbotron h1 {
+    font-size: 40px;
+    }
+    
+    .jumbotron p {
+    font-size: 30px;
+    }
+    }
 
 /* Jumbotron image */
 .jumbotron {
