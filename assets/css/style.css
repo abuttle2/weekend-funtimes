@@ -22,7 +22,8 @@
 }
 
 .navbar .nav-item a:hover {
-    background-color: blue;
+    background-color:wheat;
+    transition: all 0.3s ease;
 }
 
 /* Jumbotron styling */
