@@ -28,14 +28,17 @@
     transition: all 0.3s ease;
 }
 
-/* 
-.navbar .navbar-toggler-icon {background-color: white;} */
+.navbar .navbar-toggler-icon {
+    background-color: white;
+} 
+
 /* Jumbotron styling */
 
 .jumbotron h1 {
     font-size: 60px;
     font-weight: bold;
     color: white;
+    
 
 }
 
@@ -43,8 +46,22 @@
     font-size: 38px;
     font-weight: bold;
     color: wheat;
+    background-color: rgba(0, 0, 0, 0.2);
+
+
 }
 
+/* make the jumbotron text responsive by using media queries */
+
+@media (max-width: 576px) {
+    .jumbotron h1 {
+    font-size: 40px;
+    }
+    
+    .jumbotron p {
+    font-size: 24px;
+    }
+    }
 
 /* Jumbotron image */
 .jumbotron {
@@ -57,6 +74,8 @@
     justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     flex-direction: column;
+    padding:10px;
+    
 }
 
 /* About section styling */
