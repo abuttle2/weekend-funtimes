@@ -255,15 +255,18 @@
 
 .form {
     width: 100%;
-    max-width: 60rem;
+    max-width: 35rem;
     display: grid;
     place-items: center;
     padding: 1rem;
     background: black;
+    color: rgb(219, 218, 214);
+    font-size: 20px;
 }
 
 .container #form-title {
     color: #323235;
+    margin-bottom: 30px;
 }
 
 .form-label,
@@ -280,14 +283,15 @@
     font-weight: 700;
     padding: 1.25rem;
     font: inherit;
+    color: gray;
+    font-size: 20px;
 }
-
 
 .form-input,
 .form-textarea {
-    color: whitesmoke;
+    color: white;
     margin-bottom: 1rem;
-    background: #323644;
+    background: #323640;
     border: 0.125rem solid transparent;
     border-radius: 1.125rem;
     transition: 0.5s;
@@ -295,11 +299,31 @@
 
 .form-input:hover,
 .form-input:focus,
-.form-textarea:focus {
+.form-textarea:focus,
+.form-textarea.hover {
     outline: none;
     border-color: wheat;
     box-shadow: 0 0 0 0.3125rem rgba(199, 198, 198, 0.219);
+
 }
+
+.form-label {
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+.form-textarea {
+    min-height: 12.5rem;
+    resize: vertical;
+}
+
+.form-btn {
+    border: none;
+    border-radius: 99px;
+    background: wheat;  
+    cursor: pointer;
+    transition: 0.5s;
+}    
 
 #maps-iframe {
     margin-top: 58px;
