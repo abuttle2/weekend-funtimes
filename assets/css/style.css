@@ -22,10 +22,12 @@
 .navbar .navbar-toggler-icon {
     background-color: white;
 }
+
 .navbar .nav-item a:hover {
-    background-color:wheat;
+    background-color: wheat;
     transition: all 0.3s ease;
 }
+
 /* 
 .navbar .navbar-toggler-icon {background-color: white;} */
 /* Jumbotron styling */
@@ -64,9 +66,11 @@
     background-color: #eee;
     padding: 10px;
 }
-.wkfun{
+
+.wkfun {
     font-size: 24px;
 }
+
 .my-form {
     margin-top: -20px;
 }
@@ -89,9 +93,17 @@
     flex-direction: row;
 }
 
+.movie-genres{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 #movie-elements button {
-    margin: 5px;
-    justify-content: space-evenly;
+    margin: 10px;
+    padding: 15px;
+    justify-content: center
 
 }
 
@@ -226,7 +238,7 @@
 }
 
 .container #form-title {
-    color: #323235;    
+    color: #323235;
 }
 
 .form-label,
@@ -244,7 +256,7 @@
     padding: 1.25rem;
     font: inherit;
 }
-    
+
 
 .form-input,
 .form-textarea {
@@ -255,7 +267,7 @@
     border-radius: 1.125rem;
     transition: 0.5s;
 }
-    
+
 .form-input:hover,
 .form-input:focus,
 .form-textarea:focus {
@@ -263,5 +275,3 @@
     border-color: wheat;
     box-shadow: 0 0 0 0.3125rem rgba(199, 198, 198, 0.219);
 }
-
-
