@@ -25,8 +25,12 @@ $("#submitBtn").on("click", function (event) {
             var weatherForNextFriday;
             var weatherForNextSaturday;
             
+            // Display the weather information
+            var weatherDiv = $("<div>").attr("class", "container d-flex justify-content-center");
+            var weatherEl = $("#openweather-api");
+
             var weatherTitle = $("<p>").text("The forecast for next weekend at " + data.city.name + " is the following:");
-            $("#openweather-api").append(weatherTitle);
+            weatherEl.append(weatherTitle);
             function displayWeather(date, weather) {
                 // Loop through the list of weather data to find the weather for the next weekend
                 for (var i = 0; i < data.list.length; i++) {
@@ -37,9 +41,7 @@ $("#submitBtn").on("click", function (event) {
                         break;
                     }
                 }
-                // Display the weather information
-                var weatherDiv = $("<div>").attr("id", "#weather-info");
-                var weatherEl = $("#openweather-api");
+                
 
                 // Create the Bootstrap card
                 var card = $("<div>").addClass("card");
