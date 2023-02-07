@@ -38,6 +38,7 @@
     font-size: 60px;
     font-weight: bold;
     color: white;
+    
 
 }
 
@@ -45,6 +46,9 @@
     font-size: 38px;
     font-weight: bold;
     color: wheat;
+    background-color: rgba(0, 0, 0, 0.2);
+
+
 }
 
 /* make the jumbotron text responsive by using media queries */
@@ -70,6 +74,8 @@
     justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     flex-direction: column;
+    padding:60px;
+    
 }
 
 /* About section styling */
