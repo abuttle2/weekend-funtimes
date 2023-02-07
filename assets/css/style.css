@@ -201,13 +201,20 @@
     font-size: 14px;
 }
 
-.form {
-    
-    width: 100%;
-    max-width: 30rem;
+#cont-form {
+    min-width: 100vh;
     display: grid;
     place-items: center;
     padding: 1rem;
-    background: wheat;
-    font-family: Georgia, 'Times New Roman', Times, serif;;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.form {
+    width: 100%;
+    max-width: 60rem;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: black;
+}
+
