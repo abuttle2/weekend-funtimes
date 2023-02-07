@@ -8,7 +8,7 @@ $("#submitBtn").on("click", function (event) {
     var newSrc = "https://www.google.com/maps/embed/v1/search?q=campsite+" + city + "&key=AIzaSyAdjP3RyKMzcagNwl7pXD76vnw9KXjmTc0";
     $("#maps-iframe").attr("src", newSrc);
 
-    // Make an AJAX call to a different API
+    // Make an AJAX call to openweather api
     var apiURL = "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=" + city + "&appid=32306d8e68f68c9295a794f157aaab66";
     $.ajax({
         url: apiURL,
@@ -16,24 +16,59 @@ $("#submitBtn").on("click", function (event) {
             console.log(data);
             var currentDate = new Date();
             var nextWeekend = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + (5 - currentDate.getDay() + 7) % 7);
-
+            nextWeekend.setHours(9);
+            nextWeekend.setMinutes(0);
             // Loop through the list of weather data to find the weather for the next weekend
             var weatherForNextWeekend;
             for (var i = 0; i < data.list.length; i++) {
                 var currentWeather = data.list[i];
                 var weatherDate = new Date(currentWeather.dt * 1000);
-                if (weatherDate.getDate() == nextWeekend.getDate() && weatherDate.getMonth() == nextWeekend.getMonth() && weatherDate.getFullYear() == nextWeekend.getFullYear()) {
-                    weatherForNextWeekend = currentWeather;
+                if (weatherDate.getTime() >= nextWeekend.getTime()) {
+                    weatherForNextWeekend = data.list[i];
                     break;
                 }
             }
             // Display the weather information
             var weatherDiv = $("<div>").attr("id", "#weather-info");
             var weatherEl = $("#openweather-api");
+            var weatherTitle = $("<p>").text("The forecast for next Friday at " + data.city.name + " is the following:");
+            $(weatherEl).append(weatherTitle);
 
 
-            $(weatherDiv).text("The weather for the next weekend in " + data.city.name + " is expected to be " + weatherForNextWeekend.weather[0].description + " with a high of " + weatherForNextWeekend.main.temp_max + "°C and a low of " + weatherForNextWeekend.main.temp_min + "°C.");
+            // Create the Bootstrap card
+            var card = $("<div>").addClass("card");
+            var cardBody = $("<div>").addClass("card-body");
+            $(card).append(cardBody);
 
+            var cardTitle = $("<h3>").addClass("card-title");
+            var formattedDate = weatherDate.toLocaleDateString("en-US", {
+                day: "2-digit",
+                month: "2-digit",
+                year: "numeric"
+            });
+            cardTitle.text(formattedDate);
+            $(cardBody).append(cardTitle);
+
+            // Add the weather icon
+            var icon = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + weatherForNextWeekend.weather[0].icon + "@2x.png");
+            $(cardBody).append(icon);
+
+            // Add the temperature information
+            var temperature = $("<p>").addClass("card-text").text("Temperature: " + weatherForNextWeekend.main.temp_min + "°C - " + weatherForNextWeekend.main.temp_max + "°C");
+            $(cardBody).append(temperature);
+
+            // Add the wind information
+            var wind = $("<p>").addClass("card-text").text("Wind Speed: " + weatherForNextWeekend.wind.speed + " m/s");
+            $(cardBody).append(wind);
+
+            // Add the humidity information
+            var humidity = $("<p>").addClass("card-text").text("Humidity: " + weatherForNextWeekend.main.humidity + "%");
+            $(cardBody).append(humidity);
+
+            // Add the card to the weatherDiv
+            $(weatherDiv).append(card);
+
+            // Append weatherDiv to weatherEl
             $(weatherEl).append(weatherDiv);
         }
     });
