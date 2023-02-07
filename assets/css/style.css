@@ -7,8 +7,6 @@
     margin-left: 0;
     font-family: 'Tangerine', serif;
     text-shadow: 4px 4px 4px #aaa;
-
-
 }
 
 .navbar .navbar-nav {
@@ -21,10 +19,15 @@
     text-shadow: 2px 2px 2px #aaa;
 }
 
-.navbar .nav-item a:hover {
-    background-color: blue;
+.navbar .navbar-toggler-icon {
+    background-color: white;
 }
-
+.navbar .nav-item a:hover {
+    background-color:wheat;
+    transition: all 0.3s ease;
+}
+/* 
+.navbar .navbar-toggler-icon {background-color: white;} */
 /* Jumbotron styling */
 
 .jumbotron h1 {
