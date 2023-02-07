@@ -41,7 +41,7 @@ $("#submitBtn").on("click", function (event) {
             $(card).append(cardBody);
 
             var cardTitle = $("<h3>").addClass("card-title");
-            var formattedDate = weatherDate.toLocaleDateString("en-US", {
+            var formattedDate = weatherDate.toLocaleDateString("en-UK", {
                 day: "2-digit",
                 month: "2-digit",
                 year: "numeric"
