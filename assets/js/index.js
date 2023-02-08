@@ -1,5 +1,6 @@
 var weatherDiv = $("#weather-info");
 var weatherEl = $("#openweather-api");
+var weatherTitle = $("#weather-title");
 //Add animation to p tag in hero banner:
 $(document).ready(function(){
     // Select the text of the "lead" class
@@ -42,6 +43,7 @@ $("#submitBtn").on("click", function (event) {
         success: function (data) {
             console.log(data);
             $(weatherDiv).empty();
+            $(weatherTitle).empty();
             var currentDate = new Date();
             var nextFriday = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + (5 - currentDate.getDay() + 7) % 7);
             nextFriday.setHours(9);
@@ -56,8 +58,9 @@ $("#submitBtn").on("click", function (event) {
             // Display the weather information
             
 
-            var weatherTitle = $("<p>").text("The forecast for next weekend at " + data.city.name + " is the following:");
-            weatherDiv.append(weatherTitle);
+            var weatherP = $("<p>").text("The forecast for next weekend at " + data.city.name + " is the following:");
+            weatherTitle.append(weatherP);
+
             function displayWeather(date, weather) {
                 // Loop through the list of weather data to find the weather for the next weekend
                 for (var i = 0; i < data.list.length; i++) {
