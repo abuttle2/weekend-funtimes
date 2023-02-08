@@ -171,25 +171,35 @@ getMovieGenres();
 // javascript class for handling form submission
 
 class FormSubmit {
-    constructor(sttings) {
+    constructor(settings) {
         this.settings = settings;
         this.form = document.querySelector(this.settings.form);
-        this.formForm-bnt = document.querySelector(settings.form-btn);
+        this.formFormBtn = document.querySelector(settings.form-btn);
         if (this.form) {
             this.url = this.form.getAttribute('action');
         }
     }
 
     //display success message
-    displaySuccess(){
+    displaySuccess() {
         this.form.innerHTML = this.settings.success;
 
     }
 
     //display error message
 
-    displayError(){
+    displayError() {
         this.form.innerHTML = this.settings.error;
+    }
+
+
+
+    // Init method that checks the form property 
+
+    init () {
+        if (this.form) this.formForm-btn.addEventListener("click", () => this.globalThis.displaySuccess());
+        return this;    
 }
 
 }
+
