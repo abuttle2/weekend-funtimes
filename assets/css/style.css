@@ -39,7 +39,6 @@
     font-weight: bold;
     color: white;
     
-
 }
 
 .jumbotron p {
@@ -47,9 +46,14 @@
     font-weight: bold;
     color: wheat;
     background-color: rgba(0, 0, 0, 0.2);
-
-
+    text-align: center;
 }
+
+.lead span {
+    display: inline-block;
+    margin: 0 10px;
+}
+
 
 /* make the jumbotron text responsive by using media queries */
 
