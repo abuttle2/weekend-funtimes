@@ -14,8 +14,8 @@
 }
 
 .navbar .nav-item a {
-    color: white !important;
-    font-size: 28px;
+    color: black !important;
+    font-size: 24px;
     text-shadow: 2px 2px 2px #aaa;
 }
 
@@ -28,9 +28,6 @@
     transition: all 0.3s ease;
 }
 
-.navbar .navbar-toggler-icon {
-    background-color: white;
-} 
 
 /* Jumbotron styling */
 
