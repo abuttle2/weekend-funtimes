@@ -90,6 +90,16 @@
     height: 200px;
     margin: 10px;
   }
+
+  /* make the jumbotron image animation responsive by using media queries */ 
+
+@media (max-width: 576px) {
+    .image {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+    }
+}
 /* About section styling */
 
 .abt {
