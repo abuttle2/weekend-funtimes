@@ -108,9 +108,32 @@ $("#submitBtn").on("click", function (event) {
 
                 // Append weatherDiv to weatherEl
                 $(weatherEl).append(weatherDiv);
+
+            }
+            function weatherAdvise() {
+                var weatherFri;
+                var weatherSat;
+                for (var i = 0; i < data.list.length; i++) {
+                    var currentWeather = data.list[i];
+                    var weatherDate = new Date(currentWeather.dt * 1000);
+                    if (weatherDate.getTime() >= nextFriday.getTime()) {
+                        weatherFri = currentWeather;
+                        break;
+                    }
+                }
+                for (var i = 0; i < data.list.length; i++) {
+                    var currentWeather = data.list[i];
+                    var weatherDate = new Date(currentWeather.dt * 1000);
+                    if (weatherDate.getTime() >= nextSaturday.getTime()) {
+                        weatherSat = currentWeather;
+                        break;
+                    }
+                }
+                
             }
             displayWeather(nextFriday, weatherForNextFriday);
             displayWeather(nextSaturday, weatherForNextSaturday);
+            weatherAdvise();
         }
     });
 });
