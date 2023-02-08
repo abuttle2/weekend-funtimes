@@ -255,7 +255,8 @@
 
 .form {
     width: 100%;
-    max-width: 35rem;
+    max-width: 25rem;
+    max-height: 100rem;
     display: grid;
     place-items: center;
     padding: 1rem;
@@ -281,7 +282,7 @@
 .form-btn {
     width: 100%;
     font-weight: 700;
-    padding: 1.25rem;
+    padding: 1rem;
     font: inherit;
     color: gray;
     font-size: 20px;
@@ -290,7 +291,7 @@
 .form-input,
 .form-textarea {
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     background: #323640;
     border: 0.125rem solid transparent;
     border-radius: 1.125rem;
@@ -313,17 +314,29 @@
 }
 
 .form-textarea {
-    min-height: 12.5rem;
+    min-height: 5rem;
     resize: vertical;
 }
 
 .form-btn {
     border: none;
     border-radius: 99px;
-    background: wheat;  
+    background: white;  
     cursor: pointer;
     transition: 0.5s;
 }    
+
+button:hover,
+button:focus {
+    outline:none;
+    background: wheat;
+}
+
+.form-btn:disabled {
+    cursor: not-allowed;
+    background: #555b69;
+
+}
 
 #maps-iframe {
     margin-top: 58px;
