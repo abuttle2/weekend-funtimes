@@ -287,13 +287,13 @@
 .form-label,
 .form-input,
 .form-textarea,
-.form-btn {
+.formBtn {
     display: block;
 }
 
 .form-input,
 .form-textarea,
-.form-btn {
+.formBtn {
     width: 100%;
     font-weight: 700;
     padding: 1rem;
@@ -332,7 +332,7 @@
     resize: vertical;
 }
 
-.form-btn {
+.formBtn {
     border: none;
     border-radius: 99px;
     background: white;  
@@ -346,11 +346,28 @@ button:focus {
     background: wheat;
 }
 
-.form-btn:disabled {
+.formBtn:disabled {
     cursor: not-allowed;
     background: #555b69;
 
 }
+
+.success,
+.error {
+    text-align: center;
+
+}
+
+
+.success {
+    color: black;;
+}
+
+.error {
+    color: red;
+}
+
+
 
 #maps-iframe {
     margin-top: 58px;
