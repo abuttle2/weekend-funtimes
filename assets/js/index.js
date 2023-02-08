@@ -92,7 +92,7 @@ $("#submitBtn").on("click", function (event) {
                 $(cardBody).append(icon);
 
                 // Add the temperature information
-                var temperature = $("<p>").addClass("card-text").text("Temperature: " + weather.main.temp_min + "°C - " + weather.main.temp_max + "°C");
+                var temperature = $("<p>").addClass("card-text").text("Temperature: " + weather.main.temp + "°C");
                 $(cardBody).append(temperature);
 
                 // Add the wind information
@@ -108,9 +108,46 @@ $("#submitBtn").on("click", function (event) {
 
                 // Append weatherDiv to weatherEl
                 $(weatherEl).append(weatherDiv);
+
+            }
+            function weatherAdvise() {
+                var weatherFri;
+                var weatherSat;
+                for (var i = 0; i < data.list.length; i++) {
+                    var currentWeather = data.list[i];
+                    var weatherDate = new Date(currentWeather.dt * 1000);
+                    if (weatherDate.getTime() >= nextFriday.getTime()) {
+                        weatherFri = currentWeather;
+                        break;
+                    }
+                }
+                for (var i = 0; i < data.list.length; i++) {
+                    var currentWeather = data.list[i];
+                    var weatherDate = new Date(currentWeather.dt * 1000);
+                    if (weatherDate.getTime() >= nextSaturday.getTime()) {
+                        weatherSat = currentWeather;
+                        break;
+                    }
+                }
+                var TempFri = weatherFri.main.temp;
+                var TempSat = weatherSat.main.temp;
+                var AddTemp = TempFri + TempSat;
+                var AvgTemp = AddTemp / 2;
+
+                var mainFri = weatherFri.weather[0].main;
+                var mainSat = weatherSat.weather[0].main;
+
+                if (mainFri != "Rain" && mainSat != "Rain" && AvgTemp.toFixed(2) > 14) {
+                    var weatherAd = $("<h4>").text("The weather is good! Check out nearby campsites on the map!");
+                    weatherTitle.prepend(weatherAd);
+                } else {
+                    var weatherAd = $("<h4>").text("The weather is not good! Check out our Movie Database below!");
+                    weatherTitle.prepend(weatherAd);
+                }
             }
             displayWeather(nextFriday, weatherForNextFriday);
             displayWeather(nextSaturday, weatherForNextSaturday);
+            weatherAdvise();
         }
     });
 });
