@@ -149,3 +149,7 @@ var searchMovieId = function (genres) {
 }
 
 getMovieGenres();
+
+
+
+
