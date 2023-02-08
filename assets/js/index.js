@@ -129,6 +129,14 @@ $("#submitBtn").on("click", function (event) {
                         break;
                     }
                 }
+                var TempFri = weatherFri.main.temp;
+                var TempSat = weatherSat.main.temp;
+                var AddTemp = TempFri + TempSat;
+                var AvgTemp = AddTemp / 2;
+
+                var mainFri = weatherFri.weather[0].main;
+                var mainSat = weatherSat.weather[0].main;
+
                 
             }
             displayWeather(nextFriday, weatherForNextFriday);
