@@ -24,7 +24,7 @@ camping themed events or indoor movie binge watching themed events depending on 
 
 · OpenWeatherMap API
 
-· Omdb API
+· The Movie Database API
 
 · MapsEmbedAPI
 

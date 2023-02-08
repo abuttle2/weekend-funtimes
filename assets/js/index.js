@@ -224,32 +224,75 @@ class FormSubmit {
     constructor(settings) {
         this.settings = settings;
         this.form = document.querySelector(this.settings.form);
-        this.formFormBtn = document.querySelector(settings.form-btn);
+        this.formBtn = document.querySelector(settings.formBtn);
         if (this.form) {
             this.url = this.form.getAttribute('action');
         }
+        this.sendForm = this.sendForm.bind(this);
+
     }
 
     //display success message
     displaySuccess() {
-        this.form.innerHTML = this.settings.success;
-
+        this.form.innerHTML = `
+        <div class="alert alert-success" role="alert">
+            ${this.settings.success}
+        </div>
+       `; 
     }
 
     //display error message
 
-    displayError() {
-        this.form.innerHTML = this.settings.error;
+    displayError(error) {
+        console.error(error);
+        this.form.innerHTML = `
+        <div class="alert alert-danger" role="alert">
+           ${this.settings.error}
+        </div>
+      `;
     }
 
+    // function getFormData that retrieves data from a form and returns it as a FormData object. 
+    getFormData() {
+        const formData = new FormData();
+        const fields = this.form.querySelectorAll("[name]");
+        fields.forEach((field) => {
+            formData.append(field.getAttribute("name"), field.value);
+        });
+        return formData;  
+    }
 
+    //This code is using the Fetch API to submit a form to a server. 
+    //The sendForm function is an asynchronous function that is called when a form is submitted (triggered by the "submit" event)
+    async sendForm(event) {
+        event.preventDefault();
+        this.formBtn.disabled =  true;
+        this.formBtn.innerText = "Submitting...";        
+        try {
+            await fetch(this.url, {
+                method: 'POST',
+                body: this.getFormData(),
+            });
+            this.displaySuccess();
+          } catch (error) {
+            this.displayError(error);
+          }
+    }
+        
 
     // Init method that checks the form property 
 
     init () {
-        if (this.form) this.formForm-btn.addEventListener("click", () => this.globalThis.displaySuccess());
+        if (this.form) this.formBtn.addEventListener("click", this.sendForm);
         return this;    
+    }
 }
 
-}
+const formSubmit = new FormSubmit({
+    form: "[data-form]",
+    button: "[data-fbtn]",
+    success: "Thank you for your submission!",
+    error: "Something went wrong! Please try again later!",
+});
 
+formSubmit.init();
