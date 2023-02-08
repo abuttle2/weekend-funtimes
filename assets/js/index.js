@@ -157,22 +157,29 @@ class FormSubmit {
     constructor(sttings) {
         this.settings = settings;
         this.form = document.querySelector(this.settings.form);
-        this.formForm-bnt = document.querySelector(settings.form-btn);
+        this.formForm-btn = document.querySelector(settings.form-btn);
         if (this.form) {
             this.url = this.form.getAttribute('action');
         }
     }
 
     //display success message
-    displaySuccess(){
+    displaySuccess() {
         this.form.innerHTML = this.settings.success;
 
     }
 
     //display error message
 
-    displayError(){
+    displayError() {
         this.form.innerHTML = this.settings.error;
 }
 
 }
+
+
+init () {
+    if (this.form) this.formForm-btn.addEventListener("click", this.globalThis.displaySuccess());
+    return this;
+}
+
