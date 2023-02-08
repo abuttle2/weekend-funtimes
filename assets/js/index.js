@@ -92,7 +92,7 @@ $("#submitBtn").on("click", function (event) {
                 $(cardBody).append(icon);
 
                 // Add the temperature information
-                var temperature = $("<p>").addClass("card-text").text("Temperature: " + weather.main.temp_min + "°C - " + weather.main.temp_max + "°C");
+                var temperature = $("<p>").addClass("card-text").text("Temperature: " + weather.main.temp + "°C");
                 $(cardBody).append(temperature);
 
                 // Add the wind information
