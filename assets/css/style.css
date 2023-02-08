@@ -66,10 +66,10 @@
 
 /* Jumbotron image */
 .jumbotron {
-    background-image: url(../images/camping.jpg);
+    background-image: url(../images/camping3.gif);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 450px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
