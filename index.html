@@ -48,13 +48,18 @@
       <h1 class="display-4 animate__animated animate__fadeInDown" id="disp-4">Welcome to Weekend Funtimes!</h1>
 
       <p class="lead">The fabulous choice for all outdoor camping & indoor movie themed weekend events planning.</p>
-
+      <!-- add images -->
+      <div class="images-container">
+      <img src="./assets/images/camping1.gif" class="image animate__animated animate__fadeIn">
+      <img src="./assets/images/camping2.gif" class="image animate__animated animate__fadeIn">
+      <img src="./assets/images/camping3.gif" class="image animate__animated animate__fadeIn">
+      </div>
     </section>
     <section id="about-container" class="abt">
       <div class="col-sm-12 col-md-12 col-lg-12">
         <h2 class="display-4 abt3">About</h2>
-        <p class="text-justify wkfun">Weekend Funtimes is a solution-focused company, addressing the challenges of event
-          planning. Our platform incorporates weather, movie and map APIs to provide a seamless experience for weekend
+        <p class="text-justify wkfun">Weekend Funtimes is a solution-focused application, addressing the challenges of event
+          planning. Our application incorporates weather, movie and map APIs to provide a seamless experience for weekend
           events. The weather API informs the event theme, either outdoor camping for good weather or movie
           binge-watching for bad weather. The movie API offers movie selection with user-defined ratings filters and the
           map API selects the ideal camping location based on user preferences. Our goal is to simplify event planning
@@ -65,8 +70,8 @@
               <h2 class="section-heading abt4">Discover what all the buzz is about!</h2>
               <p class="wkfun1">Our app is also available on any mobile device! Download now to get started!</p>
               <div class="badges">
-                <a class="badge-link" href="#"><img src="/assets/images/google-play-badge.png" alt="google play icon"></a>
-                <a class="badge-link" href="#"><img src="/assets/images/app-store-badge.png" alt="app store icon"></a>
+                <a class="badge-link" href="https://play.google.com" target="_blank"><img src="./assets/images/google-play-badge.png" alt="google play icon"></a>
+                <a class="badge-link" href="https://www.apple.com/uk/app-store"target = "_blank"><img src="./assets/images/app-store-badge.png" alt="app store icon"></a>
               </div>
           </div>
         </div>
@@ -86,6 +91,9 @@
                 <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
               </form>
             </div>
+          </div>
+          <div id="weather-title"></div>
+          <div class="container d-flex justify-content-center" id="weather-info">
           </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 text-center" id="maps-api">

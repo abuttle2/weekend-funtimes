@@ -1,4 +1,6 @@
-
+var weatherDiv = $("#weather-info");
+var weatherEl = $("#openweather-api");
+var weatherTitle = $("#weather-title");
 //Add animation to p tag in hero banner:
 $(document).ready(function(){
     // Select the text of the "lead" class
@@ -14,6 +16,15 @@ $(document).ready(function(){
     });
     });
 
+//  Add animation to images in jumbotron
+var images = document.querySelectorAll('.image');
+var currentImageIndex = 0;
+
+setInterval(function() {
+    images[currentImageIndex].style.display = 'none';
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].style.display = 'block';
+}, 3000);
 
 // Listen for click event on the submit button
 $("#submitBtn").on("click", function (event) {
@@ -31,6 +42,8 @@ $("#submitBtn").on("click", function (event) {
         url: apiURL,
         success: function (data) {
             console.log(data);
+            $(weatherDiv).empty();
+            $(weatherTitle).empty();
             var currentDate = new Date();
             var nextFriday = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + (5 - currentDate.getDay() + 7) % 7);
             nextFriday.setHours(9);
@@ -43,11 +56,11 @@ $("#submitBtn").on("click", function (event) {
             var weatherForNextSaturday;
             
             // Display the weather information
-            var weatherDiv = $("<div>").attr("class", "container d-flex justify-content-center");
-            var weatherEl = $("#openweather-api");
+            
 
-            var weatherTitle = $("<p>").text("The forecast for next weekend at " + data.city.name + " is the following:");
-            weatherEl.append(weatherTitle);
+            var weatherP = $("<p>").text("The forecast for next weekend at " + data.city.name + " is the following:");
+            weatherTitle.append(weatherP);
+
             function displayWeather(date, weather) {
                 // Loop through the list of weather data to find the weather for the next weekend
                 for (var i = 0; i < data.list.length; i++) {
@@ -79,7 +92,7 @@ $("#submitBtn").on("click", function (event) {
                 $(cardBody).append(icon);
 
                 // Add the temperature information
-                var temperature = $("<p>").addClass("card-text").text("Temperature: " + weather.main.temp_min + "°C - " + weather.main.temp_max + "°C");
+                var temperature = $("<p>").addClass("card-text").text("Temperature: " + weather.main.temp + "°C");
                 $(cardBody).append(temperature);
 
                 // Add the wind information
@@ -95,9 +108,46 @@ $("#submitBtn").on("click", function (event) {
 
                 // Append weatherDiv to weatherEl
                 $(weatherEl).append(weatherDiv);
+
+            }
+            function weatherAdvise() {
+                var weatherFri;
+                var weatherSat;
+                for (var i = 0; i < data.list.length; i++) {
+                    var currentWeather = data.list[i];
+                    var weatherDate = new Date(currentWeather.dt * 1000);
+                    if (weatherDate.getTime() >= nextFriday.getTime()) {
+                        weatherFri = currentWeather;
+                        break;
+                    }
+                }
+                for (var i = 0; i < data.list.length; i++) {
+                    var currentWeather = data.list[i];
+                    var weatherDate = new Date(currentWeather.dt * 1000);
+                    if (weatherDate.getTime() >= nextSaturday.getTime()) {
+                        weatherSat = currentWeather;
+                        break;
+                    }
+                }
+                var TempFri = weatherFri.main.temp;
+                var TempSat = weatherSat.main.temp;
+                var AddTemp = TempFri + TempSat;
+                var AvgTemp = AddTemp / 2;
+
+                var mainFri = weatherFri.weather[0].main;
+                var mainSat = weatherSat.weather[0].main;
+
+                if (mainFri != "Rain" && mainSat != "Rain" && AvgTemp.toFixed(2) > 14) {
+                    var weatherAd = $("<h4>").text("The weather is good! Check out nearby campsites on the map!");
+                    weatherTitle.prepend(weatherAd);
+                } else {
+                    var weatherAd = $("<h4>").text("The weather is not good! Check out our Movie Database below!");
+                    weatherTitle.prepend(weatherAd);
+                }
             }
             displayWeather(nextFriday, weatherForNextFriday);
             displayWeather(nextSaturday, weatherForNextSaturday);
+            weatherAdvise();
         }
     });
 });

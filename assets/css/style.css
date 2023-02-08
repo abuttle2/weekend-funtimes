@@ -66,10 +66,10 @@
 
 /* Jumbotron image */
 .jumbotron {
-    background-image: url(../images/camping.jpg);
+    background-image: url(../images/camping3.gif);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 450px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,7 +78,28 @@
     padding:10px;
     
 }
+/* image container styling */
+.images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+  }
 
+  /* make the jumbotron image animation responsive by using media queries */ 
+
+@media (max-width: 576px) {
+    .image {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+    }
+}
 /* About section styling */
 
 .abt {
