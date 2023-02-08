@@ -78,7 +78,18 @@
     padding:10px;
     
 }
-
+/* image container styling */
+.images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+  }
 /* About section styling */
 
 .abt {
