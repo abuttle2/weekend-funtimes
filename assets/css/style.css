@@ -14,8 +14,8 @@
 }
 
 .navbar .nav-item a {
-    color: white !important;
-    font-size: 28px;
+    color: black !important;
+    font-size: 24px;
     text-shadow: 2px 2px 2px #aaa;
 }
 
@@ -28,9 +28,6 @@
     transition: all 0.3s ease;
 }
 
-.navbar .navbar-toggler-icon {
-    background-color: white;
-} 
 
 /* Jumbotron styling */
 
@@ -39,7 +36,6 @@
     font-weight: bold;
     color: white;
     
-
 }
 
 .jumbotron p {
@@ -47,9 +43,14 @@
     font-weight: bold;
     color: wheat;
     background-color: rgba(0, 0, 0, 0.2);
-
-
+    text-align: center;
 }
+
+.lead span {
+    display: inline-block;
+    margin: 0 10px;
+}
+
 
 /* make the jumbotron text responsive by using media queries */
 

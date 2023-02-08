@@ -1,3 +1,20 @@
+
+//Add animation to p tag in hero banner:
+$(document).ready(function(){
+    // Select the text of the "lead" class
+    var words = $('.lead').text().split(" ");
+    
+    // Empty the text of the "lead" class
+    $('.lead').empty();
+    
+    // Loop through each word in the words array
+    $.each(words, function(i, v){
+    // Append the current word in the loop as a span element to the "lead" class, hide it, and fade it in with a delay of 1000ms * (index + 1)
+    $('.lead').append($('<span>').text(v).hide().fadeIn(1000 * (i+1)));
+    });
+    });
+
+
 // Listen for click event on the submit button
 $("#submitBtn").on("click", function (event) {
     // Prevent the default form submit behavior
