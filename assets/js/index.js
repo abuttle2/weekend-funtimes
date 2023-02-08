@@ -137,7 +137,13 @@ $("#submitBtn").on("click", function (event) {
                 var mainFri = weatherFri.weather[0].main;
                 var mainSat = weatherSat.weather[0].main;
 
-                
+                if (mainFri != "Rain" && mainSat != "Rain" && AvgTemp.toFixed(2) > 14) {
+                    var weatherAd = $("<h4>").text("The weather is good! Check out nearby campsites on the map!");
+                    weatherTitle.prepend(weatherAd);
+                } else {
+                    var weatherAd = $("<h4>").text("The weather is not good! Check out our Movie Database below!");
+                    weatherTitle.prepend(weatherAd);
+                }
             }
             displayWeather(nextFriday, weatherForNextFriday);
             displayWeather(nextSaturday, weatherForNextSaturday);
