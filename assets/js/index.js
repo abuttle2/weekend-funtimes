@@ -14,6 +14,15 @@ $(document).ready(function(){
     });
     });
 
+//  Add animation to images in jumbotron
+var images = document.querySelectorAll('.image');
+var currentImageIndex = 0;
+
+setInterval(function() {
+    images[currentImageIndex].style.display = 'none';
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].style.display = 'block';
+}, 3000);
 
 // Listen for click event on the submit button
 $("#submitBtn").on("click", function (event) {
