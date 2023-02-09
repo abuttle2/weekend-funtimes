@@ -2,8 +2,6 @@
 
 ## ♟️ Description
 
-###  Whatt is the problem the product will address?
-
 
 We are solving the problem of not having access to a Weekend Funtimes
 Planner. The Weekend Funtimes application will allow the events planning
@@ -27,12 +25,12 @@ camping themed events or indoor movie binge watching themed events depending on 
 · OpenWeatherMap API
 
 · The Movie Database API
-
+ 
 · MapsEmbed API
 
 ---
 
-## 👷🏾‍♂️ Installation
+##  👷🏾‍♂️ Installation
 
 N/A
 
@@ -55,12 +53,10 @@ accordingly.
 ## 📷 Screenshot
 
 ![preview](./assets/images/Screenshot.jpeg)
-
 ## 🎯 Link
 
-[Please, click here to access it!](https://abuttle2.github.io/weekend-funtimes/)
+[Please click here to access!](https://abuttle2.github.io/weekend-funtimes/)
 
----
 
 ## 🚀Tecnologies
 
