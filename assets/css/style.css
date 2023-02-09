@@ -206,6 +206,7 @@
 
 }
 
+/* make footer and maps-iframe responsive by using media queries */ 
 @media (max-width: 991px) {
     .footer [class^=col-] {
         text-align: left;
@@ -229,6 +230,7 @@
         width: 400px;
         height: 350px;
     }
+
 }
 
 .hr {
@@ -284,7 +286,7 @@
     min-width: 150vh;
     display: grid;
     place-items: center;
-    padding: 1rem;
+    padding: 2rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
