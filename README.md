@@ -1,6 +1,6 @@
-# weekend-funtimes
+# Weekend funtimes
 
-## Description
+## ♟️ Description
 
 ### Whatt is the problem the product will address?
 
@@ -20,7 +20,7 @@ camping themed events or indoor movie binge watching themed events depending on 
  
 ---
 
-## Third Party APIs used: 
+##  📌 Third Party APIs used: 
 
 · OpenWeatherMap API
 
@@ -30,13 +30,13 @@ camping themed events or indoor movie binge watching themed events depending on 
 
 ---
 
-## Installation
+##  👷🏾‍♂️ Installation
 
 N/A
 
 ---
 
-## Usage
+## 📌 Usage
 
 It is possible to use the navigation bar at the top of the page to go to the Welcome, search foir APIs and Contact us.
 
@@ -50,10 +50,10 @@ accordingly.
 
 ---
 
-## Screenshot
+## 📷 Screenshot
 
-![preview](./assets/.........png)
-## Link
+![preview](./assets/images/)
+## 🎯 Link
 
 [click here to access:](https://abuttle2.github.io/weekend-funtimes/)
 
@@ -85,13 +85,13 @@ accordingly.
 
 ---
 
-## Lisence
+## 👉🏻 Lisence
 
 Please refer to the LICENSE file for more information.
 
 ---
 
-## The team: 
+## # 🤓 The team: 
 
 - Obiaderi Agbonrofo
 - Guillermo Serra
