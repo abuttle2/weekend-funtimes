@@ -1,8 +1,9 @@
-# weekend-funtimes
+# Weekend funtimes
 
-## Description
+## ♟️ Description
 
-### Whatt is the problem the product will address?
+###  Whatt is the problem the product will address?
+
 
 We are solving the problem of not having access to a Weekend Funtimes
 Planner. The Weekend Funtimes application will allow the events planning
@@ -13,30 +14,31 @@ Using the weather api to check the weather forecast for that weekend, they will 
 
 There will be the movie api to help select the various movies the guests want to watch and these will filter based on ratings inputted. We will also have the map api to help select good camping spots and these will filter based on user choices.
 
-### Who is the audience?
+###  Who is the audience?
+
 
 An events planning company that plans weekend events that are either outdoor
 camping themed events or indoor movie binge watching themed events depending on the weather forecast for that weekend.
  
 ---
 
-## Third Party APIs used: 
+##  📌 Third Party APIs used: 
 
 · OpenWeatherMap API
 
 · The Movie Database API
 
-· MapsEmbedAPI
+· MapsEmbed API
 
 ---
 
-## Installation
+## 👷🏾‍♂️ Installation
 
 N/A
 
 ---
 
-## Usage
+## 📌 Usage
 
 It is possible to use the navigation bar at the top of the page to go to the Welcome, search foir APIs and Contact us.
 
@@ -50,12 +52,13 @@ accordingly.
 
 ---
 
-## Screenshot
+## 📷 Screenshot
 
-![preview](./assets/.........png)
-## Link
+![preview](./assets/images/Screenshot.jpeg)
 
-[click here to access:](https://abuttle2.github.io/weekend-funtimes/)
+## 🎯 Link
+
+[Please, click here to access it!](https://abuttle2.github.io/weekend-funtimes/)
 
 ---
 
@@ -85,13 +88,13 @@ accordingly.
 
 ---
 
-## Lisence
+## 👉🏻 Lisence
 
 Please refer to the LICENSE file for more information.
 
 ---
 
-## The team: 
+## 🤓 The team: 
 
 - Obiaderi Agbonrofo
 - Guillermo Serra

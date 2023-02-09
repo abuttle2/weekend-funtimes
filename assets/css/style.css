@@ -361,8 +361,8 @@
     transition: 0.5s;
 }    
 
-button:hover,
-button:focus {
+.formBtn:hover,
+.formBtn:focus {
     outline:none;
     background: wheat;
 }
