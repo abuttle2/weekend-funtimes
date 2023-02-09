@@ -25,7 +25,7 @@ camping themed events or indoor movie binge watching themed events depending on 
 · OpenWeatherMap API
 
 · The Movie Database API
-
+ 
 · MapsEmbedAPI
 
 ---
@@ -57,7 +57,7 @@ accordingly.
 
 [Please click here to access!](https://abuttle2.github.io/weekend-funtimes/)
 
----
+---gi
 
 ## 🚀Tecnologies
 
