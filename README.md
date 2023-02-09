@@ -52,10 +52,10 @@ accordingly.
 
 ## 📷 Screenshot
 
-![preview](./assets/images/)
+![preview](./assets/images/Screenshot.jpeg)
 ## 🎯 Link
 
-[click here to access:](https://abuttle2.github.io/weekend-funtimes/)
+[Please click here to access!](https://abuttle2.github.io/weekend-funtimes/)
 
 ---
 
