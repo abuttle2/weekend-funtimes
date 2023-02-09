@@ -57,7 +57,6 @@ accordingly.
 
 [Please click here to access!](https://abuttle2.github.io/weekend-funtimes/)
 
----gi
 
 ## 🚀Tecnologies
 
