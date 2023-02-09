@@ -224,7 +224,7 @@ class FormSubmit {
     constructor(settings) {
         this.settings = settings;
         this.form = document.querySelector(this.settings.form);
-        this.formBtn = document.querySelector(settings.formBtn);
+        this.formBtn = document.querySelector(settings.button);
         if (this.form) {
             this.url = this.form.getAttribute('action');
         }
@@ -232,13 +232,13 @@ class FormSubmit {
 
     }
 
-    //display success message
+    // Display success message
     displaySuccess() {
         this.form.innerHTML = `
         <div class="alert alert-success" role="alert">
             ${this.settings.success}
         </div>
-       `; 
+        `;
     }
 
     //display error message
@@ -266,7 +266,7 @@ class FormSubmit {
     //The sendForm function is an asynchronous function that is called when a form is submitted (triggered by the "submit" event)
     async sendForm(event) {
         event.preventDefault();
-        this.formBtn.disabled =  true;
+        this.formBtn.disabled = true;
         this.formBtn.innerText = "Submitting...";        
         try {
             await fetch(this.url, {
@@ -291,8 +291,8 @@ class FormSubmit {
 const formSubmit = new FormSubmit({
     form: "[data-form]",
     button: "[data-fbtn]",
-    success: "Thank you for your submission!",
-    error: "Something went wrong! Please try again later!",
+    success: "<h1 class=`success`>Thank you for your submission!</h1>",
+    error: "<h1 class=`error`>Something went wrong! Please try again later!</h1>",
 });
 
 formSubmit.init();

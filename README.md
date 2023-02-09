@@ -2,7 +2,6 @@
 
 ## ♟️ Description
 
-### Whatt is the problem the product will address?
 
 We are solving the problem of not having access to a Weekend Funtimes
 Planner. The Weekend Funtimes application will allow the events planning
@@ -13,7 +12,8 @@ Using the weather api to check the weather forecast for that weekend, they will 
 
 There will be the movie api to help select the various movies the guests want to watch and these will filter based on ratings inputted. We will also have the map api to help select good camping spots and these will filter based on user choices.
 
-### Who is the audience?
+###  Who is the audience?
+
 
 An events planning company that plans weekend events that are either outdoor
 camping themed events or indoor movie binge watching themed events depending on the weather forecast for that weekend.
@@ -26,7 +26,7 @@ camping themed events or indoor movie binge watching themed events depending on 
 
 · The Movie Database API
  
-· MapsEmbedAPI
+· MapsEmbed API
 
 ---
 
@@ -90,7 +90,7 @@ Please refer to the LICENSE file for more information.
 
 ---
 
-## # 🤓 The team: 
+## 🤓 The team: 
 
 - Obiaderi Agbonrofo
 - Guillermo Serra
