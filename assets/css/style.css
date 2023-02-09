@@ -4,51 +4,392 @@
     font-size: 50px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-left: 0; 
+    margin-left: 0;
     font-family: 'Tangerine', serif;
     text-shadow: 4px 4px 4px #aaa;
-
-
 }
-.navbar .navbar-nav  {
-    margin: 0 0 0 auto;  
- }
- 
- .navbar .nav-item a{
-     color: white !important;
-     font-size: 28px;
-     text-shadow: 2px 2px 2px #aaa;
- }
 
- .navbar .nav-item a:hover{
-    background-color: blue;
+.navbar .navbar-nav {
+    margin: 0 0 0 auto;
 }
+
+.navbar .nav-item a {
+    color: black !important;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+.navbar .navbar-toggler-icon {
+    background-color: white;
+}
+
+.navbar .nav-item a:hover {
+    background-color: wheat;
+    transition: all 0.3s ease;
+}
+
 
 /* Jumbotron styling */
 
 .jumbotron h1 {
     font-size: 60px;
     font-weight: bold;
-    color:white;
+    color: white;
     
 }
 
-    .jumbotron p {
-        font-size: 38px;
-        font-weight: bold;
-        color:wheat;
-    }
+.jumbotron p {
+    font-size: 38px;
+    font-weight: bold;
+    color: wheat;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
 
+.lead span {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+
+/* make the jumbotron text responsive by using media queries */
+
+@media (max-width: 576px) {
+    .jumbotron h1 {
+    font-size: 40px;
+    }
+    
+    .jumbotron p {
+    font-size: 24px;
+    }
+    }
 
 /* Jumbotron image */
 .jumbotron {
-    background-image: url(../images/camping.jpg);
+    background-image: url(../images/camping3.gif);
     background-size: cover;
     background-repeat: no-repeat;
-    height:450px;
+    height: 600px;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     flex-direction: column;
+    padding:10px;
+    
+}
+/* image container styling */
+.images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+  }
+
+  /* make the jumbotron image animation responsive by using media queries */ 
+
+@media (max-width: 576px) {
+    .image {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+    }
+}
+/* About section styling */
+
+.abt {
+    margin-top: -30px;
+    background-color: #eee;
+    padding: 10px;
+}
+
+.wkfun {
+    font-size: 24px;
+}
+
+/* download styling */
+.download .badges .badge-link {
+    margin-bottom: 25px;
+  }
+  
+.download .badges .badge-link:last-child {
+    margin-bottom: 0;
+  }
+  
+.download .badges .badge-link img {
+    height: 60px;
+  }
+  
+.my-form {
+    margin-top: -20px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+/* Submit button styling */
+.btn-primary {
+    margin-bottom: 50px;
+
+}
+
+#movies-api.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.movie-genres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 15px;
+}
+
+#movie-elements button {
+    margin: 10px;
+    padding: 15px;
+    justify-content: center
+}
+
+.card {
+    width: 300px;
+}
+
+.movie-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* footer */
+
+.footer {
+    margin: 30px auto;
+    height: auto;
+    width: auto;
+    padding: 45px 0 20px;
+    background-color: #bbb;
+    color: #26272b;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    text-size-adjust: auto;
+}
+
+.footer .social_media-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #aaa;
+}
+
+.copyright-text {
+    margin-left: 90px;
+    margin-top: 30px;
+    text-align: left;
+
+}
+
+@media (max-width: 991px) {
+    .footer [class^=col-] {
+        text-align: left;
+        margin-bottom: 30px;
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        padding-bottom: 0;
+        height: auto;
+    }
+
+    .footer .copyright-text,
+    .footer .social_media-icons {
+        text-align: center;
+    }
+
+    #maps-iframe {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+.hr {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.social_media-icons {
+    margin-top: 25px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social_media-icons li {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.social_media-icons a {
+    background-color: #eceeef;
+    color: #26272b;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100px;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.social_media-icons a:active,
+.social_media-icons a:focus,
+.social_media-icons a:hover {
+    color: wheat;
+    background-color: #262930;
+}
+
+.social_media-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+}
+
+/* form */
+
+#cont-form {
+    min-width: 150vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form {
+    width: 100%;
+    max-width: 25rem;
+    max-height: 100rem;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: black;
+    color: rgb(219, 218, 214);
+    font-size: 20px;
+}
+
+.container #form-title {
+    color: #323235;
+    margin-bottom: 30px;
+}
+
+.form-label,
+.form-input,
+.form-textarea,
+.formBtn {
+    display: block;
+}
+
+.form-input,
+.form-textarea,
+.formBtn {
+    width: 100%;
+    font-weight: 700;
+    padding: 1rem;
+    font: inherit;
+    color: gray;
+    font-size: 20px;
+}
+
+.form-input,
+.form-textarea {
+    color: white;
+    margin-bottom: 0.5rem;
+    background: #323640;
+    border: 0.125rem solid transparent;
+    border-radius: 1.125rem;
+    transition: 0.5s;
+}
+
+.form-input:hover,
+.form-input:focus,
+.form-textarea:focus,
+.form-textarea.hover {
+    outline: none;
+    border-color: wheat;
+    box-shadow: 0 0 0 0.3125rem rgba(199, 198, 198, 0.219);
+
+}
+
+.form-label {
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+.form-textarea {
+    min-height: 5rem;
+    resize: vertical;
+}
+
+.formBtn {
+    border: none;
+    border-radius: 99px;
+    background: white;  
+    cursor: pointer;
+    transition: 0.5s;
+}    
+
+button:hover,
+button:focus {
+    outline:none;
+    background: wheat;
+}
+
+.formBtn:disabled {
+    cursor: not-allowed;
+    background: #555b69;
+
+}
+
+.success,
+.error {
+    text-align: center;
+
+}
+
+
+.success {
+    color: black;;
+}
+
+.error {
+    color: red;
+}
+
+
+
+#maps-iframe {
+    margin-top: 58px;
 }
