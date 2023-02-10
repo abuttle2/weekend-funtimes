@@ -203,7 +203,7 @@
     }
 }
 @media (max-width: 576px) {
-.modal-body p,button {
+.modal-body p {
     margin-top: 15px;
     margin-left: 100px;
   }}
