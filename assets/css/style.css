@@ -133,6 +133,86 @@
     margin-top: 20px;
 }
 
+  .modal {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: fixed;
+    top:-20px;
+    left:-170px;
+    z-index: 9999; 
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .modal-header {
+    background-color: #758493;
+    padding: 8px;
+    align-items: center;
+
+  }
+  
+  .modal-header h2 {
+    color: wheat;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    margin-left: 195px;
+    
+  }
+  
+  .modal-body {
+    background-color: silver;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-body p {
+    color: #333;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    margin-top: 15px;
+  }
+  
+  .modal-footer {
+    background-color:  #758493;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-footer button {
+    color: #333;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    background-color: dodgerblue;
+  }
+/* make the modal responsive by using media queries */ 
+
+@media (max-width: 576px) {
+    .modal-header h2 {
+     margin-left: 350px;
+    }
+}
+@media (max-width: 576px) {
+.modal-body p {
+    margin-top: 15px;
+    margin-left: 100px;
+  }}
+
+  @media (max-width: 576px) {
+    .modal-footer button {
+        margin-top: 10px;
+        margin-left: 100px;
+      }}
 /* Submit button styling */
 .btn-primary {
     margin-bottom: 50px;
