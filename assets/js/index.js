@@ -35,7 +35,10 @@ $(document).ready(function(){
         // Update the visit count in the modal
         $("#visitCount").text(localStorage.getItem("visitCount"));
       }
-      
+    //   make modal disappear after display
+    setTimeout(function() {
+        $("#myModal").modal("hide");
+      }, 1500);
 
 //  Add animation to images in jumbotron
 var images = document.querySelectorAll('.image');
