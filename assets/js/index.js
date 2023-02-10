@@ -14,7 +14,28 @@ $(document).ready(function(){
     // Append the current word in the loop as a span element to the "lead" class, hide it, and fade it in with a delay of 1000ms * (index + 1)
     $('.lead').append($('<span>').text(v).hide().fadeIn(1000 * (i+1)));
     });
+    // Check and update the visit count
+  updateVisitCount();
+
+  // Show the modal when the page loads
+  $("#myModal").modal("show");
     });
+
+    function updateVisitCount() {
+        // Check if the visit count is stored in local storage
+        if (localStorage.getItem("visitCount")) {
+          // If it is, increment the count
+          var visitCount = parseInt(localStorage.getItem("visitCount"));
+          visitCount++;
+          localStorage.setItem("visitCount", visitCount);
+        } else {
+          // If it isn't, set the count to 1
+          localStorage.setItem("visitCount", 1);
+        }
+        // Update the visit count in the modal
+        $("#visitCount").text(localStorage.getItem("visitCount"));
+      }
+      
 
 //  Add animation to images in jumbotron
 var images = document.querySelectorAll('.image');
